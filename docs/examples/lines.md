@@ -9,8 +9,8 @@
 ```Julia
 using Contour, GLVisualize, GeometryTypes, GLAbstraction, Colors, FileIO
 
- window = glscreen()
- timesignal = bounce(linspace(0.0, 1.0, 360))
+window = glscreen()
+timesignal = bounce(linspace(0.0, 1.0, 360))
 # create a rotation from the time signal
 rotation = map(timesignal) do t
     rotationmatrix_z(Float32(t*2pi)) # -> 4x4 Float32 rotation matrix
@@ -40,7 +40,7 @@ for h in mini:0.2f0:maxi
     end
 end
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -55,8 +55,8 @@ end
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction, Colors
 
- window = glscreen()
- timesignal = bounce(linspace(0.0, 1.0, 360))
+window = glscreen()
+timesignal = bounce(linspace(0.0, 1.0, 360))
 const N = 2048
 function spiral(i, start_radius, offset)
 	Point2f0(sin(i), cos(i)) * (start_radius + ((i/2pi)*offset))
@@ -69,7 +69,7 @@ color = map(RGBA{Float32}, colormap("Blues", N))
 view(visualize(const_lift(curve_data, t, N), :lines, color=color))
 
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -84,8 +84,8 @@ view(visualize(const_lift(curve_data, t, N), :lines, color=color))
 ```Julia
 using GLAbstraction, Colors, GeometryTypes, GLVisualize, Reactive
 
- window = glscreen()
- timesignal = bounce(linspace(0.0, 1.0, 360))
+window = glscreen()
+timesignal = bounce(linspace(0.0, 1.0, 360))
 
 n = 400 # The number of points per line
 nloops = 20 # The number of loops
@@ -118,7 +118,7 @@ lines3d = visualize(xyz, :lines, color=colors, model=rotation)
 
 view(lines3d, window, camera=:perspective)
 
- renderloop(window)
+renderloop(window)
 
 ```
 

@@ -86,7 +86,7 @@ end)
 view(lines, window, camera=:fixed_pixel)
 view(points, window, camera=:fixed_pixel)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -170,7 +170,7 @@ renderloop(window)
 using GeometryTypes, GLVisualize, GLAbstraction, ImageMagick
 using FileIO, ColorTypes, Reactive
 
- window = glscreen()
+window = glscreen()
 
 type Mario{T}
     x 			::T
@@ -263,7 +263,7 @@ mario = visualize(image_stream, model=modelmatrix)
 
 view(mario, window, camera=:fixed_pixel)
 
- renderloop(window)
+renderloop(window)
 
 ```
 

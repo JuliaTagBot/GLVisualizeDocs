@@ -70,13 +70,13 @@ function plot_belts(rxs, rys, rzs, u1234, center1, center2, rad1, rad2)
     rxs, rys, rzs
 end
 
- window = glscreen()
- timesignal = loop(linspace(0f0, 1f0, 360))
+window = glscreen()
+timesignal = loop(linspace(0f0, 1f0, 360))
 
 xyz = quaternion_belt_trick(timesignal)
 view(visualize(xyz, :surface), window)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -91,8 +91,8 @@ view(visualize(xyz, :surface), window)
 ```Julia
 using GLVisualize, GLAbstraction
 
- window = glscreen()
- timesignal = loop(linspace(0f0,1f0,360))
+window = glscreen()
+timesignal = loop(linspace(0f0,1f0,360))
 
 function juliadata(max_iterations, imgx, imgy)
     scalex, scaley = 4.0/imgx, 4.0/imgy
@@ -137,7 +137,7 @@ view(vis, window)
 
 end
 
- renderloop(window) # render!
+renderloop(window) # render!
 
 ```
 
@@ -153,7 +153,7 @@ end
 using GLVisualize, GLAbstraction, GeometryTypes, Reactive
 
 window = glscreen()
- timesignal = loop(linspace(0f0,1f0,360))
+timesignal = loop(linspace(0f0,1f0,360))
 
 function mgrid(dim1, dim2)
     X = [i for i in dim1, j in dim2]

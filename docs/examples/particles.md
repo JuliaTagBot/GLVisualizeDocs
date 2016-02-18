@@ -10,7 +10,7 @@
 using GLVisualize, Colors, GeometryTypes, GLAbstraction, Reactive
 
 window = glscreen()
- timesignal = loop(linspace(0f0, 1f0, 360))
+timesignal = loop(linspace(0f0, 1f0, 360))
 const N = 87
 const range = linspace(-5f0, 5f0, N)
 
@@ -123,8 +123,8 @@ renderloop(window)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive
 
- window = glscreen()
- timesignal = bounce(linspace(0,1,360))
+window = glscreen()
+timesignal = bounce(linspace(0,1,360))
 N = 7
 # generate some rotations
 function rotation_func(t)
@@ -139,7 +139,7 @@ flow = map(rotation_func, timesignal)
 vis = visualize(flow)
 view(vis, window)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -242,8 +242,8 @@ renderloop(window)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction
 
- window = glscreen()
- timesignal = bounce(linspace(0f0, 1f0,360))
+window = glscreen()
+timesignal = bounce(linspace(0f0, 1f0,360))
 # last argument can be used to control the granularity of the resulting mesh
 sphere = GLNormalMesh(Sphere(Point3f0(0.5), 0.5f0), 24)
 c = collect(linspace(0.1f0,1.0f0,10f0))
@@ -252,7 +252,7 @@ rotation = map(rotationmatrix_z, const_lift(*, timesignal, 2f0*pi))
 vis = visualize((sphere, c), model=rotation, scale_y=0.1f0)
 view(vis, window)
 
- renderloop(window)
+renderloop(window)
 
 ```
 

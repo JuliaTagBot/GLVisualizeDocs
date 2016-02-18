@@ -6,8 +6,8 @@
 using Colors, GLVisualize
 using GLVisualize.ComposeBackend, Gadfly, DataFrames, RDatasets
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 p = plot(dataset("car", "SLID"), x="Wages", color="Language", Geom.histogram)
@@ -26,8 +26,8 @@ renderloop(window)
 using Colors, GLVisualize
 using Gadfly, GLVisualize.ComposeBackend
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 
@@ -49,8 +49,8 @@ renderloop(window)
 using Colors, GLVisualize
 using GLVisualize.ComposeBackend, Compose
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 p = compose(context(0.0mm, 0.0mm, 200mm, 200mm),
     rectangle([0.25, 0.5, 0.75], [0.25, 0.5, 0.75], [0.1], [0.1]),
@@ -73,8 +73,8 @@ renderloop(window)
 using GLVisualize.ComposeBackend, Gadfly, Distributions
 using Colors, GLVisualize
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 sds = [1, 1/2, 1/4, 1/8, 1/16, 1/32]
@@ -100,8 +100,8 @@ renderloop(window)
 using GLVisualize.ComposeBackend, Gadfly
 using Colors, GLVisualize
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 
@@ -129,8 +129,8 @@ renderloop(window)
 using Colors, GLVisualize
 using DataFrames, Gadfly, GLVisualize.ComposeBackend
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 xs = 0:0.1:20
@@ -167,8 +167,8 @@ renderloop(window)
 using Colors, GLVisualize
 using Gadfly, GLVisualize.ComposeBackend
 
- window = glscreen()
- composebackend = ComposeBackend.GLVisualizeBackend(window)
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
 
 
 p = plot([sin, cos], 0, 25)

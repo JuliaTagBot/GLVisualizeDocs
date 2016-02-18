@@ -10,7 +10,7 @@
 using GLVisualize, GeometryTypes
 
 window = glscreen()
- timesignal = loop(linspace(0f0,1f0,360))
+timesignal = loop(linspace(0f0,1f0,360))
 
 # use the performance tips to speed this up
 # (http://docs.julialang.org/en/release-0.4/manual/performance-tips/)
@@ -101,7 +101,7 @@ renderloop(window)
 using GLVisualize, GLAbstraction
 
 window = glscreen()
- timesignal = loop(linspace(0f0,1f0,360))
+timesignal = loop(linspace(0f0,1f0,360))
 
 # create a glsl fragment shader
 parametric_func = frag"""

@@ -9,8 +9,8 @@
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction
 
- window = glscreen()
- timesignal = loop(linspace(0f0,1f0,360))
+window = glscreen()
+timesignal = loop(linspace(0f0,1f0,360))
 # let the visualization rotate later on
 rotation = map(rotationmatrix_z, const_lift(*, timesignal, 2f0*pi))
 # create some random 3D vectors
@@ -22,7 +22,7 @@ arrows = visualize(('➤', vectors3d), scale=Vec2f0(0.1), model=rotation)
 
 view(arrows, camera=:perspective)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -37,8 +37,8 @@ view(arrows, camera=:perspective)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive
 
- window = glscreen()
- timesignal = bounce(linspace(0,1,360))
+window = glscreen()
+timesignal = bounce(linspace(0,1,360))
 N = 20
 # generate some rotations
 function rotation_func(t)
@@ -53,7 +53,7 @@ flow = map(rotation_func, timesignal)
 vis = visualize(flow, ranges=(50:800,50:500))
 view(vis, window, camera=:orthographic_pixel)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -101,8 +101,8 @@ renderloop(window)
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction
 using Colors, Reactive, FileIO
- window = glscreen()
- timesignal = bounce(linspace(0,1,50))
+window = glscreen()
+timesignal = bounce(linspace(0,1,50))
 n = 30
 const border = 50f0
 function bounce_particles(pos_velo, _)
@@ -132,7 +132,7 @@ vis = visualize((circle, map(first, position_velocity)),
 )
 view(vis, window, camera=:orthographic_pixel)
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -147,8 +147,8 @@ view(vis, window, camera=:orthographic_pixel)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
 
- window = glscreen()
- timesignal = loop(linspace(0f0, 1f0, 360))
+window = glscreen()
+timesignal = loop(linspace(0f0, 1f0, 360))
 const n1 = 30
 positions = rand(Point2f0, n1).*1000f0
 
@@ -181,7 +181,7 @@ distfield = visualize((DISTANCEFIELD, positions),
 view(distfield, window)
 
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -196,8 +196,8 @@ view(distfield, window)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
 
- window = glscreen()
- timesignal = loop(linspace(0f0, 1f0, 360))
+window = glscreen()
+timesignal = loop(linspace(0f0, 1f0, 360))
 
 # this is just one big texture
 texture_atlas = loadasset("doge.png")
@@ -231,7 +231,7 @@ distfield = visualize((Circle, positions),
 view(distfield, window)
 
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -246,8 +246,8 @@ view(distfield, window)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
 
- window = glscreen()
- timesignal = loop(linspace(0f0,1f0, 360))
+window = glscreen()
+timesignal = loop(linspace(0f0,1f0, 360))
 
 const S = -5f0
 const W = 10f0
@@ -285,7 +285,7 @@ snowflakes = visualize(
 view(snowflakes, window, camera=:perspective)
 
 
- renderloop(window)
+renderloop(window)
 
 ```
 
@@ -380,8 +380,8 @@ renderloop(window)
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction
 
- window = glscreen()
- timesignal = bounce(linspace(0,1,360))
+window = glscreen()
+timesignal = bounce(linspace(0,1,360))
 
 
 function spiral(i, start_radius, offset)
@@ -401,7 +401,7 @@ particles = const_lift(particle_data2D, t, 256)
 vis = visualize(particles, scale=Vec2f0(15))
 view(vis, window, camera=:orthographic_pixel)
 
- renderloop(window)
+renderloop(window)
 
 ```
 

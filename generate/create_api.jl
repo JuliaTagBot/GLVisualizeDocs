@@ -1,31 +1,43 @@
-using Lexicon, GLVisualize
+#=
+Used to write out all function documentations as a markdown file
+=#
+using GLVisualize
 
-const api_directory = "api" # where to put the API-docs, relative to this file.
-const modules = [GLVisualize]
+metadict = Docs.meta(GLVisualize)
 
-cd(dirname(@__FILE__)) do
+function write_docs(a, b, io)
+    # ignore unimplemented types
+    nothing
+end
 
+print_type(x::Function) = string(x.env.name)
+print_type(x::Symbol) = string(x)
+print_type(x::TypeName) = print_type(x.name)
+print_type(x) = print_type(x.name)
+print_type(x::Union) = "Union{$(join(map(print_type, x.types), " "))}"
 
-
-    # Generate and save the contents of docstrings as markdown files.
-    index  = Index()
-    for mod in modules
-        update!(index, save(joinpath(api_directory, "$(mod).md"), mod))
+function write_docs(fun::Union{Function, DataType}, fd::Union{Docs.TypeDoc, Docs.FuncDoc}, io)
+    println(io, "## `", print_type(fun), "`")
+    for (k,v) in fd.meta
+        println(io, "args: `(", join(map(x->"::$(print_type(x))", k.types), ", "), ")`")
+        println(io)
+        writemime(io, MIME"text/markdown"(), v)
+        println(io)
+        println(io, "---")
+        println(io)
     end
-    save(joinpath(api_directory, "index.md"), index; md_subheader = :category)
+    println(io, "\n") # two newlines
+end
 
-    # Add a reminder not to edit the generated files.
-    open(joinpath(api_directory, "README.md"), "w") do f
-        print(f, """
-        Files in this directory are generated using the `build.jl` script. Make
-        all changes to the originating docstrings/files rather than these ones.
-        Documentation should *only* be built directly on the `master` branch.
-        Source links would otherwise become unavailable should a branch be
-        deleted from the `origin`. This means potential pull request authors
-        *should not* run the build script when filing a PR.
+
+function write_api(path)
+    open(path, "w") do io
+        println(io, """
+        ## This API documentation was generated automatically and is a work in progress.
+
         """)
+        for (k, v) in metadict
+            write_docs(k, v, io)
+        end
     end
-
-    info("Adding all documentation changes in $(api_directory) to this commit.")
-    success(`git add $(api_directory)`) || exit(1)
 end

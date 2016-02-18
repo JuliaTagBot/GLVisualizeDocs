@@ -1,17 +1,6 @@
-# Welcome to MkDocs
+## Welcome the Documentation of GLVisualize
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+Welcome to the Documentation of GLVisualize, an interactive 3D visualization
+library written in Julia and modern OpenGL.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<video  width="200" autoplay loop><source src="../../media/arrows3d.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/billiard.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/contourlines.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/flow3D.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/arrows.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/bouncy.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/cubicles.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/graph_editing.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/bars.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/camera.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/dirac_belt.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/imageio.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/billboard.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/contourf.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/distancefield.webm">Your browser does not support the video tag.</video><video  width="200" autoplay loop><source src="../../media/image_processing.webm">Your browser does not support the video tag.</video>
