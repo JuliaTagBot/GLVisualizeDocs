@@ -1,10 +1,6 @@
 # Contourlines
 
-<video  width="600" autoplay loop>
-  <source src="../../media/contourlines.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/contourlines.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using Contour, GLVisualize, GeometryTypes, GLAbstraction, Colors, FileIO
@@ -46,11 +42,7 @@ renderloop(window)
 
 # Lines2D
 
-<video  width="600" autoplay loop>
-  <source src="../../media/lines2D.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/lines2D.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction, Colors
@@ -75,11 +67,7 @@ renderloop(window)
 
 # Lines3D
 
-<video  width="600" autoplay loop>
-  <source src="../../media/lines3D.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/lines3D.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLAbstraction, Colors, GeometryTypes, GLVisualize, Reactive
@@ -124,11 +112,7 @@ renderloop(window)
 
 # Linesegments3d
 
-<video  width="600" autoplay loop>
-  <source src="../../media/linesegments3d.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/linesegments3d.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Colors

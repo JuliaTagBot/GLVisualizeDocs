@@ -3,35 +3,21 @@
 
 
 ```Julia
-# using GLVisualize, Colors, ModernGL, GeometryTypes, GLAbstraction, GLWindow, FileIO
-# w = glscreen()
-# v, colortex = vizzedit(map(RGBA{U8}, colormap("blues", 7)), w)
+using GLVisualize, Colors, ModernGL, GeometryTypes, GLAbstraction, GLWindow, FileIO
+w = glscreen()
+v, colortex = vizzedit(map(RGBA{U8}, colormap("blues", 7)), w)
 
-# function screen(robj, w)
-# 	bb = boundingbox(robj)
-# 	area = const_lift(bb) do b
-# 		m = Vec{2,Int}(b.minimum)
-# 		SimpleRectangle{Int}(m..., (Vec{2,Int}(b.maximum+30)-m)...)
-# 	end
-# 	s = Screen(w, area=area)
-# 	transformation(robj, translationmatrix(Vec3f0(15,15,0)))
-# 	view(robj, s, camera=:fixed_pixel)
-# 	s
-# end
+robj = visualize(rand(Float32, 32,32), color_map=colortex, color_norn=Vec2f0(0,2))
+view(robj, w)
+view(v, w, camera=:fixed_pixel)
 
-# screen(v, w)
-# view(visualize(rand(Float32, 28,92), color=colortex, color_norm=Vec2f0(0,1)))
-# renderloop()
+renderloop(w)
 
 ```
 
 # Graph Editing
 
-<video  width="600" autoplay loop>
-  <source src="../../media/graph_editing.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/graph_editing.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GeometryTypes, GLVisualize, GLAbstraction, Reactive, GLWindow, GLFW
@@ -92,11 +78,7 @@ renderloop(window)
 
 # Image Processing
 
-<video  width="600" autoplay loop>
-  <source src="../../media/image_processing.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/image_processing.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using Images, Colors, GeometryTypes
@@ -160,11 +142,7 @@ renderloop(window)
 
 # Mario Game
 
-<video  width="600" autoplay loop>
-  <source src="../../media/mario_game.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/mario_game.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GeometryTypes, GLVisualize, GLAbstraction, ImageMagick

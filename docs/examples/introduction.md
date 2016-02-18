@@ -1,10 +1,6 @@
 # Rotate Robj
 
-<video  width="600" autoplay loop>
-  <source src="../../media/rotate_robj.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/rotate_robj.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction

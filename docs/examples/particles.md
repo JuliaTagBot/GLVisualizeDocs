@@ -1,10 +1,6 @@
 # Bars
 
-<video  width="600" autoplay loop>
-  <source src="../../media/bars.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/bars.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, Colors, GeometryTypes, GLAbstraction, Reactive
@@ -48,11 +44,7 @@ renderloop(window)
 
 # Cubicles
 
-<video  width="600" autoplay loop>
-  <source src="../../media/cubicles.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/cubicles.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, FileIO
@@ -114,17 +106,13 @@ renderloop(window)
 
 # Flow3D
 
-<video  width="600" autoplay loop>
-  <source src="../../media/flow3D.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/flow3D.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive
 
 window = glscreen()
-timesignal = bounce(linspace(0,1,360))
+timesignal = bounce(linspace(0f0,1f0,360))
 N = 7
 # generate some rotations
 function rotation_func(t)
@@ -145,11 +133,7 @@ renderloop(window)
 
 # Particles
 
-<video  width="600" autoplay loop>
-  <source src="../../media/particles.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/particles.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction
@@ -193,11 +177,7 @@ renderloop(window)
 
 # Sinfun
 
-<video  width="600" autoplay loop>
-  <source src="../../media/sinfun.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/sinfun.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Colors, GLAbstraction
@@ -233,11 +213,7 @@ renderloop(window)
 
 # Sphere1Drange
 
-<video  width="600" autoplay loop>
-  <source src="../../media/sphere1Drange.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/sphere1Drange.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction

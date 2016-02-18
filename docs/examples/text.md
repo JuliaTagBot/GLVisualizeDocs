@@ -1,10 +1,6 @@
 # Text
 
-<video  width="600" autoplay loop>
-  <source src="../../media/text.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/text.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Colors, GLAbstraction
@@ -52,11 +48,7 @@ renderloop(window)
 
 # Text Particle
 
-<video  width="600" autoplay loop>
-  <source src="../../media/text_particle.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/text_particle.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Colors, GLAbstraction

@@ -1,10 +1,6 @@
 # Arrows3d
 
-<video  width="600" autoplay loop>
-  <source src="../../media/arrows3d.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/arrows3d.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction
@@ -28,11 +24,7 @@ renderloop(window)
 
 # Arrows
 
-<video  width="600" autoplay loop>
-  <source src="../../media/arrows.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/arrows.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive
@@ -59,11 +51,7 @@ renderloop(window)
 
 # Billboard
 
-<video  width="600" autoplay loop>
-  <source src="../../media/billboard.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/billboard.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction, ModernGL, FileIO, Reactive
@@ -92,11 +80,7 @@ renderloop(window)
 
 # Bouncy
 
-<video  width="600" autoplay loop>
-  <source src="../../media/bouncy.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/bouncy.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction
@@ -138,11 +122,7 @@ renderloop(window)
 
 # Distancefield
 
-<video  width="600" autoplay loop>
-  <source src="../../media/distancefield.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/distancefield.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
@@ -187,11 +167,7 @@ renderloop(window)
 
 # Image Texture Atlas
 
-<video  width="600" autoplay loop>
-  <source src="../../media/image_texture_atlas.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/image_texture_atlas.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
@@ -237,11 +213,7 @@ renderloop(window)
 
 # Letitsnow
 
-<video  width="600" autoplay loop>
-  <source src="../../media/letitsnow.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/letitsnow.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction, Colors
@@ -291,11 +263,7 @@ renderloop(window)
 
 # Moving Bars
 
-<video  width="600" autoplay loop>
-  <source src="../../media/moving_bars.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/moving_bars.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, FileIO
@@ -335,11 +303,7 @@ renderloop(window)
 
 # Moving Circles
 
-<video  width="600" autoplay loop>
-  <source src="../../media/moving_circles.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/moving_circles.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction
@@ -371,11 +335,7 @@ renderloop(window)
 
 # Particles2D
 
-<video  width="600" autoplay loop>
-  <source src="../../media/particles2D.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/particles2D.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, Reactive, GLAbstraction

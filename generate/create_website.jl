@@ -24,10 +24,14 @@ function file2doc(name, source_path, doc_md_io, screencapture_file)
     source_code = open(source_path) do io
         sprint() do str_io
             needs_end = false
+            println(source_path)
             for line in readlines(io)
                 line = chomp(line)
                 if startswith(line, "if !isdefined(:runtests)")
                     needs_end = true
+                    continue
+                end
+                if startswith(line, "else") && needs_end
                     continue
                 end
                 if startswith(line, "end") && needs_end
@@ -131,7 +135,7 @@ function make_docs(directories::Vector, io)
     end
 end
 
-#make_docs(readdir(source_root))
+make_docs(readdir(source_root))
 
 
 open(joinpath(doc_root, "index.md"), "w") do io
@@ -139,7 +143,7 @@ open(joinpath(doc_root, "index.md"), "w") do io
     println(io, """
     ## Welcome the Documentation of GLVisualize
 
-    Welcome to the Documentation of GLVisualize, an interactive 3D visualization
+    GLVisualize is an interactive 3D visualization
     library written in Julia and modern OpenGL.
     """)
     for x=1:4
@@ -154,20 +158,37 @@ end
 open(joinpath(doc_root, "performance.md"), "w") do io
 println(io, """# Performance tips for GLVisualize
 
-GLVisualize doesn't optimize drawing many RenderObjects objects very well yet. We would need some better OpenGL draw call optimization for that.
+GLVisualize doesn't optimize drawing many RenderObjects objects well yet.
+Better OpenGL draw call optimization would be needed for that.
 So if you need to draw many objects, make sure that you use the particle system or merge meshes whenever possible.
+
 For animations, make sure to pass a static boundingbox via the keyword arguments.
 
 E.g:
-
-Julia
+```Julia
 visualize(x, boundingbox=nothing) # Or AABB{Float32}(Vec3f0(0),Vec3f0(0))
+```
 Otherwise the boundinbox will be calculated every time the signal updates which can be very expensive.
 
-Here is a [blog post](http://randomfantasies.com/2015/05/glvisualize-benchmark/) about the performance of GLVisualize. It's a bit outdated but should still be accurate."""
+
+If you want to find out a bit more about the genral performance of GLVisualize, you can
+read this [blog post](http://randomfantasies.com/2015/05/glvisualize-benchmark/).
+It's a bit outdated but should still be accurate.
+"""
 )
 end
+open(joinpath(doc_root, "known_issues.md"), "w") do io
+println(io, """# Known Issues
+Please refer to the [Github issues](https://github.com/JuliaGL/GLVisualize.jl/issues)
 
+* It's known that the camera is a bit odd, fixing is high up on the priority list.
+
+* Boundingboxes are not always correct
+* On Mac OS, you need to make sure that Homebrew.jl works correctly, which was not the case on some tested machines (needed to checkout master and then rebuild)
+* GLFW needs cmake and xorg-dev libglu1-mesa-dev on linux (can be installed via sudo apt-get install xorg-dev libglu1-mesa-dev).
+* VideoIO and FreeType seem to be also problematic on some platforms. There isn't a fix for all situations. If these package fail, try Pk.update();Pkg.build("FailedPackage"). If this still fails, report an issue on Github!
+""")
+end
 include("create_api.jl")
 
 write_api(joinpath(doc_root, "api.md"))

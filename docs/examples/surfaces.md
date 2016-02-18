@@ -1,10 +1,6 @@
 # Dirac Belt
 
-<video  width="600" autoplay loop>
-  <source src="../../media/dirac_belt.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/dirac_belt.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GeometryTypes, Quaternions, GLVisualize, Reactive, GLAbstraction
@@ -82,11 +78,7 @@ renderloop(window)
 
 # Juliaset
 
-<video  width="600" autoplay loop>
-  <source src="../../media/juliaset.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/juliaset.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction
@@ -143,11 +135,7 @@ renderloop(window) # render!
 
 # Mesh
 
-<video  width="600" autoplay loop>
-  <source src="../../media/mesh.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/mesh.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction, GeometryTypes, Reactive
@@ -191,11 +179,7 @@ renderloop(window)
 
 # Surface
 
-<video  width="600" autoplay loop>
-  <source src="../../media/surface.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/surface.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction, Colors, Reactive, GeometryTypes

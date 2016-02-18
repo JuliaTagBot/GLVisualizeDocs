@@ -1,10 +1,6 @@
 # Contourf
 
-<video  width="600" autoplay loop>
-  <source src="../../media/contourf.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/contourf.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes
@@ -42,11 +38,7 @@ renderloop(window)
 
 # Imageio
 
-<video  width="600" autoplay loop>
-  <source src="../../media/imageio.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/imageio.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GeometryTypes, GLAbstraction, Colors, FileIO
@@ -91,11 +83,7 @@ renderloop(window)
 
 # Parametric Fun
 
-<video  width="600" autoplay loop>
-  <source src="../../media/parametric_fun.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/parametric_fun.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction

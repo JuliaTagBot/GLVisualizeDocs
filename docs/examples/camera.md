@@ -1,10 +1,6 @@
 # Billiard
 
-<video  width="600" autoplay loop>
-  <source src="../../media/billiard.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/billiard.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 #=
@@ -133,11 +129,7 @@ view(robj, camera=:my_cam)
 
 # Camera
 
-<video  width="600" autoplay loop>
-  <source src="../../media/camera.webm">
-      Your browser does not support the video tag.
-</video>
-
+<video  width="600" autoplay loop><source src="../../media/camera.webm"> Your browser does not support the video tag. </video>
 
 ```Julia
 using GLVisualize, GLAbstraction, FileIO, GeometryTypes, Reactive, GLWindow, Colors
