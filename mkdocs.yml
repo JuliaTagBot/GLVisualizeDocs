@@ -4,3 +4,4 @@ theme: journal
 repo_url: https://github.com/JuliaGL/GLVisualize.jl
 site_description: Interactive 3D visualization with GLVisualize (Documentation).
 site_author: Simon Danisch
+site_url: www.glvisualize.com/
