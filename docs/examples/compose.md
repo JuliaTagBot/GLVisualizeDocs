@@ -121,6 +121,25 @@ renderloop(window)
 
 ```
 
+# Singraph
+
+![Singraph](../../media/singraph.png)
+
+```Julia
+using Colors, GLVisualize
+using Gadfly, GLVisualize.ComposeBackend
+
+window = glscreen()
+composebackend = ComposeBackend.GLVisualizeBackend(window)
+
+
+p = plot([sin, cos], 0, 25)
+
+draw(composebackend, p)
+renderloop(window)
+
+```
+
 # Sin Dataframe
 
 ![Sin Dataframe](../../media/sin_dataframe.png)
@@ -155,25 +174,6 @@ p = plot(df, x=:x, y=:y, ymin=:ymin, ymax=:ymax, color=:f, Geom.line, Geom.ribbo
 
 draw(composebackend, p)
 
-renderloop(window)
-
-```
-
-# Singraph
-
-![Singraph](../../media/singraph.png)
-
-```Julia
-using Colors, GLVisualize
-using Gadfly, GLVisualize.ComposeBackend
-
-window = glscreen()
-composebackend = ComposeBackend.GLVisualizeBackend(window)
-
-
-p = plot([sin, cos], 0, 25)
-
-draw(composebackend, p)
 renderloop(window)
 
 ```

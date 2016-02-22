@@ -71,8 +71,8 @@ $(source_code)
     )
 end
 function remove_root(root, path)
-    rootsplit = split(root, Base.path_separator)
-    pathsplit = split(path, Base.path_separator)
+    rootsplit = split(root, Base.Filesystem.path_separator)
+    pathsplit = split(path, Base.Filesystem.path_separator)
 
     path = joinpath(pathsplit[length(rootsplit):end]...)
     path
@@ -135,17 +135,23 @@ function make_docs(directories::Vector, io)
     end
 end
 
-make_docs(readdir(source_root))
+#make_docs(readdir(source_root))
 
 
 open(joinpath(doc_root, "index.md"), "w") do io
     names = filter(x->endswith(x, ".webm"), readdir(screencapture_root))
-    println(io, """
-    ## Welcome the Documentation of GLVisualize
+println(io, """
+## Welcome the Documentation of GLVisualize
 
-    GLVisualize is an interactive 3D visualization
-    library written in Julia and modern OpenGL.
-    """)
+GLVisualize is an interactive 3D visualization library written in Julia and modern OpenGL. 
+Its focus is on scientific visualizations but is not restricted to it.
+There are lots of 2D and 3D visualization types like particles, surfaces, meshes, sprites, lines and text.
+It uses [Reactive](https://github.com/JuliaLang/Reactive.jl) to offer an easy way of animating your data.
+It also offers very basic GUI elements like slider and buttons.
+
+Please check out the examples to see what GLVisualize is capable of.
+
+""")
     for x=1:4
         for y=1:4
             path = names[sub2ind((4,4),x,y)]
