@@ -100,7 +100,7 @@ function file2doc(sourcepath, doc_md_io)
 end
 
 #const doc_root = "C:\\Users\\Sim\\GLVisualize\\docs"
-const doc_root = joinpath(homedir(), "GLVisualizeDocs", "docs")
+const doc_root = Pkg.dir("GLVisualizeDocs", "docs")
 const screencapture_root = joinpath(doc_root, "media")
 const source_root = Pkg.dir("GLVisualize", "examples")
 
@@ -143,7 +143,7 @@ open(joinpath(doc_root, "index.md"), "w") do io
 println(io, """
 ## Welcome the Documentation of GLVisualize
 
-GLVisualize is an interactive 3D visualization library written in Julia and modern OpenGL. 
+GLVisualize is an interactive 3D visualization library written in Julia and modern OpenGL.
 Its focus is on scientific visualizations but is not restricted to it.
 There are lots of 2D and 3D visualization types like particles, surfaces, meshes, sprites, lines and text.
 It uses [Reactive](https://github.com/JuliaLang/Reactive.jl) to offer an easy way of animating your data.
@@ -154,7 +154,7 @@ Please check out the examples to see what GLVisualize is capable of.
 """)
     for x=1:4
         for y=1:4
-            path = names[sub2ind((4,4),x,y)]
+            path = names[sub2ind((4,4), x, y)]
             html = to_html_md(splitext(path)[1], path, 200)
             print(io, html)
         end
@@ -172,7 +172,7 @@ For animations, make sure to pass a static boundingbox via the keyword arguments
 
 E.g:
 ```Julia
-visualize(x, boundingbox=nothing) # Or AABB{Float32}(Vec3f0(0),Vec3f0(0))
+visualize(x, boundingbox = nothing) # Or AABB{Float32}(Vec3f0(0),Vec3f0(0))
 ```
 Otherwise the boundinbox will be calculated every time the signal updates which can be very expensive.
 
@@ -186,8 +186,6 @@ end
 open(joinpath(doc_root, "known_issues.md"), "w") do io
 println(io, """# Known Issues
 Please refer to the [Github issues](https://github.com/JuliaGL/GLVisualize.jl/issues)
-
-* It's known that the camera is a bit odd, fixing is high up on the priority list.
 
 * Boundingboxes are not always correct
 * On Mac OS, you need to make sure that Homebrew.jl works correctly, which was not the case on some tested machines (needed to checkout master and then rebuild)
